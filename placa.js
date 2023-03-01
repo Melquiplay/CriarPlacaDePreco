@@ -58,16 +58,16 @@ function gerar(){
         texto.style.fontFamily = 'Verdana'
         break;
       case "b9":
-        document.getElementById("perscor").innerHTML = "<br> <input onchange=mudarcor3() id=cor3 type=color>Cor da descrição! <br>"
+        document.getElementById("perscor").innerHTML = "<br><input onchange=mudarcor3() id=cor3 type=color>Cor da descrição! <br>"
         break;
       case "b10":
-        document.getElementById("perscor").innerHTML = "<<br> input onchange=mudarcor2() id=cor2 type=color>Cor do tipo de produto! <br>"
+        document.getElementById("perscor").innerHTML = "<br><input onchange=mudarcor2() id=cor2 type=color>Cor do tipo de produto! <br>"
         break;  
       case "b11":
-        document.getElementById("perscor").innerHTML = "<<br> input onchange=mudarcor() id=cor type=color>Cor do nome do produto <br>"
+        document.getElementById("perscor").innerHTML = "<br><input onchange=mudarcor() id=cor type=color>Cor do nome do produto <br>"
         break;
       case "b12":
-        document.getElementById("perscor").innerHTML = "<<br> input onchange=mudarcor4() id=cor4 type=color>Cor do valor do produto <br>"
+        document.getElementById("perscor").innerHTML = "<br><input onchange=mudarcor4() id=cor4 type=color>Cor do valor do produto <br>"
         break; 
       case "c1":
         base = document.getElementById("base")
