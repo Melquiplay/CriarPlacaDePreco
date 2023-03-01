@@ -1,0 +1,149 @@
+*{
+     margin-top: 0;
+    margin-left: 0;
+  }
+  #ver{
+    position: relative;
+    background-color: red;
+    width: 101%;
+    height: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+  }
+  body{
+    background-image: linear-gradient(to right, rgb(249, 105, 105), rgb(248, 248, 77));
+  }
+  #placa{
+    position: absolute;
+    width: 400px;
+    height: 560px;   
+    left: 10%;
+    top: 10%;
+    background-color: rgb(255, 255, 255);
+  }
+  #tpromoção{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    border-bottom: solid 3px black ;
+    font-weight: bold;
+    background-color: red;
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;        
+    margin-bottom: auto;
+  }
+  #produto{
+    position: absolute;
+    width: 100%;
+    height: 42%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+#promocao{
+  padding: 4px;
+  margin-bottom: auto;
+}
+#tipoDeProduto{
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+#NomeDoProduto{
+  position: relative;
+  font-family: fantasy;
+  position: relative; 
+  left: 52%;
+  font-size: 70px;
+  transform: translate(-50%, -1%);
+  margin: -10px;
+}
+.nomeproduto{
+  color: rgb(0, 0, 0);
+}
+#descricao{
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+#s{
+  font-weight: bold;
+  position: absolute;
+  font-size: 60px;
+  left: 30px;
+  top: 20px;
+}
+#Reais{
+  font-weight: bold;
+  position: absolute;
+  font-size: 180px;
+  right: 130px;
+  top: 40px;
+}
+#centavos{
+  font-weight: bold;
+  position: absolute;
+  font-size: 100px;
+  left: 290px;
+  top: 60px;
+  text-decoration: underline;
+}
+#virgula{
+  position: absolute;
+  font-size: 150px;
+  top: 10px;
+  right: 105px;
+}
+.preco{
+  color: red;
+}
+#peso{
+  font-weight: bold;
+  margin-bottom: 0;
+  position: absolute;
+  font-size: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+#base{
+  position: absolute;
+  width: 380px;
+  height: 240px;
+  background-color: yellow;
+  margin: 10px;
+  border-radius: 70px;
+  border: solid 3px rgb(255, 0, 0);
+}
+#dentrada{
+    box-shadow: 5px 2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    padding: 20px;
+    border: 2px solid black ;
+    right: 10%;
+    top: 10%;
+    border-radius: 10px;
+    background-color: silver;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+}
+.botao1{
+  width: 45%;
+  border-radius: 20px;
+  background-color: yellow;
+  font-size: 15px;
+  padding: 3px;
+  border: none;
+}
+button:hover{
+  background-color:  red;
+  color: white;
+}
+#dvalor{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 300px;
+}

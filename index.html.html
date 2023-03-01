@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="javas" href="oioioi.js">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="placa.js"></script>
+    <link rel="stylesheet" href="placa.css"> 
+</head>
+<body>
+    <div id="ver"><p id="versao">by: <a href="https://www.youtube.com/@MelquiPlay">MelquiPlay</a>, V1.0</p></div>
+      <div id="placa">
+        <div id="tpromoção"><p id="promocao">PROMOÇÃO</p></div>
+        <div id="produto">
+          <p  id="tipoDeProduto">ASINHA DE PORCO</p>
+          <p  id="NomeDoProduto">DESTAQUE</p> 
+          <p  id="descricao">ORELHA DE GALINHA</p>
+        </div>
+        <div id="dvalor">
+          <div id="base"></div>
+          <p name="Valor" class="preco" id="s">R$;</p>
+          <p name="Reais" class="preco" id="Reais">10</p>
+          <p name="Virgula" class="preco" id="virgula">,</p>
+          <p name="centavos" class="preco" id="centavos">99</p>
+          <p name="peso" class="preco" id="peso">Kg</p>
+        </div> 
+      </div>
+      <div id="dentrada">
+        <input name="TipoDeProduto" class="entrada" id="itipoDeProduto" placeholder="Exemplo: CARNE BOVINA">
+        <label for="itipoDeProduto">Tipo De Produto</label>
+        <br><br>
+        <input name="NomeDoProduto" class="entrada" id="iNomeDoProduto" placeholder="Exemplo: ACÉM">
+        <label for="iNomeDoProduto">Nome Do Produto</label>
+        <br><br>
+        <input  name="Descrição" class="entrada" id="idescricao" placeholder="Mais Detalhes(Opcional)">
+        <label for="idescricao">Descrição</label>
+        <br><br>
+        <input name="ValorDoProduto" class="entrada" id="iValorDoProduto" placeholder="Exemplo: 10,99">
+        <label for="iValorDoProduto">Valor do Produto</label>
+        <br><br>
+        <input name="Peso/MililitroDoProduto" id="kg" placeholder="Exemplo: 2Kg, ou 300ML">
+        <label for="kg">Kilos ou Mililitro</label>
+        <br><br>
+        <select onchange="gerar()" id="opcoes">
+            <optgroup label="CABEÇALHO">
+          <option value="a1">Promoção</option>
+          <option value="a2">Oferta</option>
+             </optgroup>
+            <optgroup label="FONTE: NOME DO PRODUTO">
+          <option value="b1" style="font-family: fantasy">fantasy</option>
+          <option value="b2" style="font-family: cursive">cursive</option>
+          <option value="b3" style="font-family: Brush Script MT, Brush Script Std, cursive">Brush Script MT</option>
+          <option value="b4" style="font-family: Arial, sans-serif">Arial, sans-serif</option>
+          <option value="b5" style="font-family: Georgia, serif">Georgia, serif</option>
+          <option value="b6" style="font-family: Helvetica">Helvetica</option>
+          <option value="b7" style="font-family: Courier">Courier</option>
+          <option value="b8" style="font-family: Verdana">Verdana</option>
+          <option value="b10">Cor: Tipo de produto</option>
+          <option value="b11">Cor: Nome do produto</option>
+          <option value="b9" >Cor: Descrição</option>
+          <option value="b12" >Cor: Valor</option>
+            </optgroup>
+          <optgroup label="ESTILOS">
+          <option value="c1">Base em Arredondada</option>
+          <option value="c2">Base Quadrada</option>
+          <option value="c3">Base Arredondada</option>
+          <option value="c4">Clássico</option>
+          <option value="c5">Padrão</option>
+          </optgroup>
+        </select>
+        <label for="opcoes">Personalizar</label>
+        <br>
+        <p id="perscor"></p>
+        <div id="TamanhoNomeProduto">
+          <bUtton onclick="cre()">+</bUtton>
+          <bUtton onclick="dim()">-</bUtton>
+          <label for="TamanhoNomeProduto">Tamanho do Nome do Produto</label>
+        </div>
+        <br>
+        <button class="botao1" onclick="gerar()">Gerar Placa</button>
+        <button class="botao1" id="download" onclick="ae()">DOWNLOAD</button>  
+    </div>
+</body>
+</html>
