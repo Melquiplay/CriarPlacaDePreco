@@ -17,7 +17,9 @@
     flex-wrap: wrap;
     align-items: center;
     height: 100%;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 3rem;
+
     
   }
   #placa{
@@ -25,8 +27,7 @@
     width: 400px;
     height: 560px;   
     background-color: rgb(255, 255, 255);
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 8%; 
   }
   #tpromoção{
     -webkit-text-stroke-width: 2px;
@@ -131,10 +132,8 @@
     background-color: silver;
     font-size: 18px;
     border-radius: 10px;
-    border: none;
-    margin-top: 20px;
-    margin-left: 20px;
-    
+    border: none;   
+    margin-left: 8%;
 }
 .botao1{
   width: 45%;
