@@ -18,9 +18,7 @@
     align-items: center;
     height: 100%;
     justify-content: start;
-    gap: 3rem;
-
-    
+    gap: 3rem;    
   }
   #placa{
     position: relative;
@@ -152,4 +150,4 @@ button:hover{
   width: 100%;
   height: 50%;
   top: 300px;
-}
+} 
