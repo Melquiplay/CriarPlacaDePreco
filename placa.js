@@ -27,35 +27,35 @@ function gerar(){
         break;
       case "b1":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'fantasy'
+        texto.style.fontFamily = 'Anton, sans-serif'
         break;
       case "b2":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'cursive'
+        texto.style.fontFamily = 'Cedarville Cursive, cursive'
         break;
       case "b3":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'Brush Script MT, Brush Script Std, cursive'
+        texto.style.fontFamily = 'Chelsea Market, cursive'
         break;
       case "b4":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'Arial, sans-serif'
+        texto.style.fontFamily = 'Courier Prime, monospace'
         break;
       case "b5":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'Georgia, serif'
+        texto.style.fontFamily = 'Hanalei Fill, cursive'
         break;
       case "b6":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'Helvetica'
+        texto.style.fontFamily = 'Metal Mania, cursive'
         break;
       case "b7":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'Courier'
+        texto.style.fontFamily = 'Caveat Brush, cursive'
         break;
       case "b8":
         texto = document.getElementById("NomeDoProduto")
-        texto.style.fontFamily = 'Verdana'
+        texto.style.fontFamily = 'Righteous, cursive'
         break;
       case "b9":
         document.getElementById("perscor").innerHTML = "<br><input onchange=mudarcor3() id=cor3 type=color>Cor da descrição! <br>"
@@ -143,13 +143,16 @@ function gerar(){
     teste.style.fontSize = maior + 'px'
     }
   //Este código usa o método html2canvas para renderizar a div selecionada em um objeto Canvas e, em seguida, usa o método toDataURL() do objeto Canvas para obter uma representação da imagem em formato de dados de URL. Em seguida, ele cria um elemento de link temporário, configura o atributo download com o nome do arquivo de imagem que você deseja baixar e define o atributo href com a URL da imagem. Finalmente, ele adiciona o link ao corpo da página, clica nele para iniciar o download da imagem e, em seguida, remove o link temporário do DOM.
-    function ae(){   
-      html2canvas(document.querySelector("#placa")).then(canvas => {
-      var link = document.createElement("a");
-      document.body.appendChild(link);
-      link.download = "minha-div.png";
-      link.href = canvas.toDataURL();
-      link.target = '_blank';
-      link.click();
-    });
-   }
+  function ae(){   
+    html2canvas(document.querySelector("#placa")).then(canvas => {
+    var link = document.createElement("a");
+    document.body.appendChild(link);
+    tipo = document.getElementById('itipoDeProduto');
+    produto = document.getElementById('iNomeDoProduto');
+    nomeFinal = tipo.value + " " + produto.value;
+    link.download = nomeFinal;
+    link.href = canvas.toDataURL();
+    link.target = '_blank';
+    link.click();
+  });
+ }
