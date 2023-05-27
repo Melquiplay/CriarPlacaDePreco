@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melquizedeque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="box-img-header">
+            <img class="img-logo" src="images/melquiplay.png">
+        </div>
+        <nav>
+            <a href="#experiences" class="nav-links">Experiências</a>
+            <a href="#who-am-i" class="nav-links">Quem sou eu</a>
+            <a href="#my-projects" class="nav-links">Meus projetos</a>
+            <a href="#contact" class="nav-links">Contatos</a>
+        </nav>
+        <div class="box-btn-actions">
+            <button onclick="teste()" class="btn-actions">Cadastrar</button>
+            <button  onclick="getProjetos()" class="btn-actions">Entrar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="first-section">
+            <div>
+                <h1>Olá! eu sou o <br> <strong>Melquizedeque</strong></h1>
+                <p>Tenho 24 anos, sou estudante de<strong> desenvolvimento web</strong>, <strong>Youtuber</strong> e <strong>Universitario.</strong></p>
+                <a href="#contact" class="btn-actions link-action">Saber Mais</a>
+            </div>
+            <div class="box-img-main">
+                <img style="width: 100%;" src="images/melqui.png" alt="Foto de Melquizedeque">
+
+            </div>
+        </section><br><br><br>
+
+        <section id="experiences" class="second-section">
+            <h2 class="title">Experiências</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </section>
+        
+        <section id="who-am-i" class="third-section">
+            <h2 class="title">Quem sou eu</h2>
+            <div>
+                <img class="img-who-am-i" src="images/IMG_20230222_184531_090.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam deleniti, modi repudiandae eaque architecto rem eius voluptatum sed ratione explicabo maiores quod odio debitis soluta aliquam quas distinctio quo. </p>
+            </div>
+        </section>
+
+        <section id="my-projects" class="fourth-section">
+            <h2 class="title">Meus projetos</h2>
+            <p id="loading">Carregando...</p>
+            <div id="my-projects-list"></div>
+        </section>
+
+
+       
+
+
+    </main>
+
+
+    <footer class="contact">
+        
+    </footer>
+    <script src="mains.js"></script>
+</body>
+</html>
