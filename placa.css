@@ -5,6 +5,11 @@
 *{
     margin: 0;
  }
+body{
+    position: relative;
+    min-height: 100vh;
+}
+
  header{
     display: flex;
     position: relative;
