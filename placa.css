@@ -45,8 +45,8 @@ body{
     padding-bottom: 1rem;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     bottom: 0;
+    width: 100%;
  }
  .conteudo{
     display: flex;
@@ -55,6 +55,8 @@ body{
     width: 100%;
     gap: 3rem;
     align-items: center;
+    position: relative;
+    padding-bottom: 100px;
  }
  
  body{
