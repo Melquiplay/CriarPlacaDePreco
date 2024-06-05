@@ -208,6 +208,9 @@ button:hover{
 .redes_icon{
    width: 40px;
 }
+label p:hover{
+    cursor: pointer;
+}
 @media screen and (max-width: 420px) {
    .section1{
       width: 110%; 
