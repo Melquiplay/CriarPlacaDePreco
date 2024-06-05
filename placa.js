@@ -143,7 +143,7 @@ function gerar(){
     teste.style.fontSize = maior + 'px'
     }
   //Este código usa o método html2canvas para renderizar a div selecionada em um objeto Canvas e, em seguida, usa o método toDataURL() do objeto Canvas para obter uma representação da imagem em formato de dados de URL. Em seguida, ele cria um elemento de link temporário, configura o atributo download com o nome do arquivo de imagem que você deseja baixar e define o atributo href com a URL da imagem. Finalmente, ele adiciona o link ao corpo da página, clica nele para iniciar o download da imagem e, em seguida, remove o link temporário do DOM.
-  function ae(){   
+  function ae(){
     html2canvas(document.querySelector("#placa")).then(canvas => {
     var link = document.createElement("a");
     document.body.appendChild(link);
@@ -156,3 +156,35 @@ function gerar(){
     link.click();
   });
  }
+ document.addEventListener('DOMContentLoaded', (event) => {
+  const tipoDeProdutoo = document.getElementById('itipoDeProduto');
+  tipoDeProdutoo.addEventListener('input', () => {
+      const valor = tipoDeProdutoo.value; 
+      document.getElementById('tipoDeProduto').innerHTML = valor;
+  });
+  const NomeDoProdutoo = document.getElementById('iNomeDoProduto');
+  NomeDoProdutoo.addEventListener('input', () => {
+      const valor = NomeDoProdutoo.value; 
+      document.getElementById('NomeDoProduto').innerHTML = valor;
+  });
+  const descricaoo = document.getElementById('idescricao');
+  descricaoo.addEventListener('input', () => {
+      const valor = descricaoo.value; 
+      document.getElementById('descricao').innerHTML = valor;
+  });
+  var valor = document.getElementById('iValorDoProduto');
+valor.addEventListener('input', () => {
+    var valorr = valor.value.replace('.',',');
+
+    const Virgula = valorr.indexOf(',');
+    
+    document.getElementById('centavos').innerHTML = valorr.replace(',','').substring(Virgula);
+    document.getElementById('Reais').innerHTML = valorr.substring(0, Virgula);
+});
+
+  const detalhee = document.getElementById('kg');
+  detalhee.addEventListener('input', () => {
+      const valor = detalhee.value; 
+      document.getElementById('peso').innerHTML = valor;
+  });
+});
