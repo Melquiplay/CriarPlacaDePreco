@@ -73,6 +73,7 @@ body{
    height: 560px;   
    background-color: rgb(255, 255, 255);
    overflow: hidden;
+   box-shadow: 5px 5px 15px rgb(0, 0, 0);
  }
  #tpromoção{
    -webkit-text-stroke-width: 2px;
