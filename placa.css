@@ -75,6 +75,13 @@ body{
    overflow: hidden;
    box-shadow: 5px 5px 15px rgb(0, 0, 0);
  }
+
+.placaFundo{
+   background-color: white;
+   width: 100%;
+   height: 100%;
+}
+
  #tpromoção{
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: #000;
