@@ -142,7 +142,6 @@ function gerar(){
     teste = document.getElementById("NomeDoProduto");
     teste.style.fontSize = maior + 'px'
     }
-  //Este código usa o método html2canvas para renderizar a div selecionada em um objeto Canvas e, em seguida, usa o método toDataURL() do objeto Canvas para obter uma representação da imagem em formato de dados de URL. Em seguida, ele cria um elemento de link temporário, configura o atributo download com o nome do arquivo de imagem que você deseja baixar e define o atributo href com a URL da imagem. Finalmente, ele adiciona o link ao corpo da página, clica nele para iniciar o download da imagem e, em seguida, remove o link temporário do DOM.
   function ae(){
     html2canvas(document.querySelector("#placa")).then(canvas => {
     var link = document.createElement("a");
