@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Cedarville+Cursive&family=Chelsea+Market&family=Courier+Prime:ital,wght@1,700&family=Hanalei+Fill&family=Metal+Mania&family=Righteous&family=Roboto:ital,wght@0,400;1,900&family=Sarala:wght@700&family=Special+Elite&display=swap');
 
+/*Eu adaptei parte do código para ser utilizada em um outro projeto com mais recursos,
+ por este motivo, algumas linhas de código, principalmente aqui do CSS estão inutilizadas
+ nessa versão do site, como por exemplo, as variáveis de modo dark*/
 
 *{
     margin: 0;
@@ -9,6 +12,8 @@ body{
     position: relative;
     min-height: 100vh;
 }
+
+
 
  header{
     display: flex;
@@ -20,6 +25,7 @@ body{
     justify-content:space-around;
     align-items: center;
     }
+
  .redes_box{
    display: flex;
    gap: 15px;
@@ -48,26 +54,88 @@ body{
     bottom: 0;
     width: 100%;
  }
- .conteudo{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    gap: 3rem;
-    align-items: center;
-    position: relative;
-    padding-bottom: 100px;
- }
+
  
  body{
     display: flex;
-    background-image: linear-gradient(to right, rgb(249, 105, 105), rgb(248, 248, 77));
+    background-color: aliceblue;
     flex-direction: column;
     width: 100%;
     gap: 3rem;
     height: 100%;
- }
- #placa{
+   }
+
+button:hover{
+ background-color:  red;
+ color: white;
+}
+
+
+.footer_info{
+   display: flex;
+   text-decoration: none;
+   color: white;
+   justify-content: center;
+   gap: 1rem;
+}
+.redes_icon{
+   width: 40px;
+}
+label p:hover{
+    cursor: pointer;
+}
+
+
+
+[theme="dark"]{
+   --cor_fundo: rgb(44, 44, 44);
+   --cor_txt: white;  
+}
+
+
+.tema{
+   width: 100%;
+   text-align: center;
+   font-size: 100px;
+   background-color: rgb(126, 125, 125);
+   margin-top: 5rem;
+   margin-bottom: 4rem;
+}
+
+.tema h1{
+   font-size: 40px;
+   color: white;
+}
+
+.uso{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   flex-direction: column;
+   gap: 2rem;
+   margin-bottom: 2rem;
+}
+
+.txt{
+   width: 60%;
+   color: var(--cor_txt);
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.txt h2{
+   text-align: center;
+}
+
+.uso img {
+   width: 100%;
+}
+
+body{
+   background-color: var(--cor_fundo);
+}
+ 
+#placa{
    position: relative;
    width: 400px;
    height: 560px;   
@@ -76,13 +144,15 @@ body{
    box-shadow: 5px 5px 15px rgb(0, 0, 0);
  }
 
-.placaFundo{
+ .placaFundo{
    background-color: white;
    width: 100%;
    height: 100%;
-}
+ }
 
- #tpromoção{
+
+ 
+#tpromoção{
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: #000;
    border-bottom: solid 3px black ;
@@ -94,7 +164,7 @@ body{
    color: white;        
    margin-bottom: auto;
  }
- #produto{
+#produto{
    position: absolute;
    width: 100%;
    height: 42%;
@@ -104,11 +174,13 @@ body{
 #promocao{
  padding: 4px;
  margin-bottom: auto;
+ color: white;
 }
 #tipoDeProduto{
  font-weight: bold;
  font-size: 40px;
  margin-bottom: 0;
+ color: #000;
 }
 #NomeDoProduto{
  position: relative;
@@ -118,6 +190,7 @@ body{
  font-size: 70px;
  transform: translate(-50%, -1%);
  margin: -10px;
+ color: #000;
 }
 .nomeproduto{
  color: rgb(0, 0, 0);
@@ -126,6 +199,7 @@ body{
  font-weight: bold;
  font-size: 40px;
  margin-bottom: 0;
+ color: #000;
 }
 #s{
  font-weight: bold;
@@ -186,7 +260,7 @@ body{
    font-size: 18px;
    border-radius: 10px;
    border: none;   
-   height: 50%;
+   height: 80%;
 }
 .botao1{
  width: 45%;
@@ -206,30 +280,199 @@ button:hover{
  height: 50%;
  top: 300px;
 }
-.footer_info{
+
+.placas{
    display: flex;
-   text-decoration: none;
-   color: white;
-   justify-content: center;
+   justify-content: space-around;
    gap: 1rem;
+   flex-wrap: wrap;
 }
+
+
 .redes_icon{
    width: 40px;
 }
-label p:hover{
-    cursor: pointer;
+
+
+
+.content{
+   display: flex;
+   justify-content: space-around;
+   gap: 1rem; 
 }
-@media screen and (max-width: 420px) {
-   .section1{
-      width: 110%; 
+
+
+
+.slide{
+   display: flex;
+   width: 1000px;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   overflow: hidden;
+   background-color: aliceblue;
+}
+
+.fotos{
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   width: 100%;
+   border-radius: 15px;
+   transform: translateX(0);
+   background-color: aliceblue;
+   transition: 1s;
+}
+
+button{
+   background-color: white;
+}
+
+
+.sli{
+   width: 100%; 
+}
+
+.carro{
+   margin-left: 50%;
+   transform: translateX(-50%);
+   width: 70%;
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+
+iframe{  
+   width: 100%;
+   height: 500px;  
+}
+.video{
+   margin-left: 50%;
+   transform: translateX(-50%);
+   width: 70%;
+   background-color: aliceblue;
+}
+
+
+
+@media screen and (max-width: 1220px) {
+   .content{
+      display: flex;
+      gap: 10rem;
+      
    }
-   header{
-      width: 100%;
+   .placas{
+      flex-direction: column-reverse; 
+      align-items: center;
+   }}
+   
+
+
+@media screen and (max-width: 950px) {
+   .content{
+      display: flex;
+      gap: 1rem;  
    }
+   .txt{
+      width: 80%;
+   }
+   iframe{  
+      height: 350px;  
+   }
+
+   }
+   @media screen and (max-width: 800px) {
+      .content{
+         flex-direction: column; 
+         align-items: center; 
+      }
+      .video{
+         width: 80%;
+      }
+      .carro{
+         margin-left: 50%;
+         transform: translateX(-50%);
+         width: 95%;
+         display: flex;
+         align-items: center;
+         margin-bottom: 1rem;
+      }
+      iframe{  
+         height: 300px;  
+      }
+      
+    }
+ 
+@media screen and (maX-width: 410px) {
+   
    body{
-      width: 110%;
+      width: 120%;
    }
+   iframe{  
+      height: 200px;  
    }
+   .video{
+      width: 95%;
+   }
+
+   .txt{
+      width: 95%;
+   
+   }
+
+   .tema h1{
+      font-size: 30px;
+   }
+  
+   #placa{
+      width: 350px;
+      height: 500px;
+   }
+   #dentrada{
+      width: 300px;
+   }
+      
+   #dvalor{
+      top: 280px;
+     }
+
+   #base{
+   position: absolute;
+   width: 330px;
+   height: 200px;
+   background-color: yellow;
+   margin: 10px;
+   border-radius: 70px;
+   border: solid 3px rgb(255, 0, 0);
+   }
+   #centavos{
+      font-weight: bold;
+      position: absolute;
+      font-size: 90px;
+      left: 245px;
+      top: 70px;
+      text-decoration: underline;
+     }
+   #tipoDeProduto, #descricao{
+      font-size: 35px;
+   }
+   #tpromoção{
+      font-size: 55px;
+    }
+   #Reais{
+   font-weight: bold;
+   position: absolute;
+   font-size: 170px;
+   right: 130px;
+   top: 55px;
+   }
+   #virgula{
+      top: 70px;
+      font-size: 100px;
+     }
+   }
+   
    @media screen and (max-width: 700px) {
       .redes_box{
          display: flex;
@@ -261,18 +504,4 @@ label p:hover{
        width: 100%;
     
     } 
-@media screen and (maX-width: 360px) {
-   .section1{
-      width: 140%; 
-   }
-   header{
-      width: 110%;
-   }
-   body{
-      width: 120%;
-   }
-   footer{
-      width: 110%;
-   }
-      
-   }
+
