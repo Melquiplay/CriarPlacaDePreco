@@ -12,9 +12,6 @@ body{
     position: relative;
     min-height: 100vh;
 }
-
-
-
  header{
     display: flex;
     position: relative;
@@ -25,7 +22,6 @@ body{
     justify-content:space-around;
     align-items: center;
     }
-
  .redes_box{
    display: flex;
    gap: 15px;
@@ -79,7 +75,6 @@ button:hover{
  color: white;
 }
 
-
 .footer_info{
    display: flex;
    text-decoration: none;
@@ -93,8 +88,6 @@ button:hover{
 label p:hover{
     cursor: pointer;
 }
-
-
 
 [theme="dark"]{
    --cor_fundo: rgb(44, 44, 44);
@@ -302,15 +295,11 @@ button:hover{
    width: 40px;
 }
 
-
-
 .content{
    display: flex;
    justify-content: space-around;
    gap: 1rem; 
 }
-
-
 
 .slide{
    display: flex;
