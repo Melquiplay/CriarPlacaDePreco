@@ -188,3 +188,10 @@ valor.addEventListener('input', () => {
       document.getElementById('peso').innerHTML = valor;
   });
 });
+
+
+var largura = window.screen.width;
+
+if (largura < 350){
+  alert("Olá :) Notei que você está acessando a página por um dispositivo com a tela pequena, provavelmente um celular. Recomendo utilizar um computador para uma melhor experiência, mas de qualquer forma, fique a vontade :D,  há! e rolando a página para baixo, tem alguns conteúdos, como exemplos de uso das placas, e vídeo tutorial.")
+}
