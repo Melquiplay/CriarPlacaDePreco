@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PreçoPlay</title>
-    <link type="javas" href="oioioi.js">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="placa.js"></script>
-    <link rel="icon" type="image/png" href="image/icone_barra_preçoplay.png"/>
+    <link rel="icon" type="image/png" href="./image/icone_barra_preçoplay.png"/>
     <link rel="stylesheet" href="placa.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Cedarville+Cursive&family=Chelsea+Market&family=Courier+Prime:ital,wght@1,700&family=Hanalei+Fill&family=Metal+Mania&family=Righteous&family=Roboto:ital,wght@0,400;1,900&family=Sarala:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
-<body>
+<body >
     <header>
         <div class="redes_box">
             <a class="redes" href="https://youtu.be/w4SSSvUv-Uw">Tutorial de uso</a>
@@ -29,24 +30,31 @@
     <div class="contentBox">
         <div class="childBox">
            <div class="content">
-                <div id="placa">
-                    <div class="placaFundo">
-                            <div id="tpromoção"><p id="promocao">PROMOÇÃO</p></div>
-                            <div id="produto">
-                            <label for="itipoDeProduto"><p  id="tipoDeProduto">ASINHA DE PORCO</p></label>
-                            <label for="iNomeDoProduto"><p  id="NomeDoProduto">DESTAQUE</p></label>
-                            <label for="idescricao"><p  id="descricao">ORELHA DE GALINHA</p></label>
-                            </div>
-                        <div id="dvalor">
-                            <div id="base"></div>
-                            <p name="Valor" class="preco" id="s">R$;</p>
-                            <label for="iValorDoProduto"><p name="Reais" class="preco" id="Reais">10</p></label>
-                            <label for="iValorDoProduto"><p name="Virgula" class="preco" id="virgula">,</p></label>
-                            <label for="iValorDoProduto"><p name="centavos" class="preco" id="centavos">99</p></label>
-                            <label for="kg"><p name="peso" class="preco" id="peso">Kg</p></label>
-                        </div> 
+            <div id="placa">
+                <div class="placaFundo">
+                    <div class="divCab"><img src="./image/geradorDePreco/promocaoCab.png" alt=""></div>
+                    <div id="tpromoção"><p id="promocao">PROMOÇÃO</p></div>
+                    <div id="produto">
+                        <label for="itipoDeProduto"><p onclick="EmFoco('tipoDeProduto')"  id="tipoDeProduto">ASINHA DE PORCO</p></label>
+                        <label for="iNomeDoProduto"><p onclick="EmFoco('NomeDoProduto')"  id="NomeDoProduto">DESTAQUE</p></label>
+                        <label for="idescricao"><p onclick="EmFoco('descricao')"  id="descricao">ORELHA DE GALINHA</p></label>
+                        <div class="divLinha"><img src="./image/geradorDePreco/linha.png" alt=""></div>
                     </div>
+
+                    <div onclick="EmFoco('imagemProduto')"  class="divImgProduto">
+                        <img class="imgproduto"  src='./image/produtos/hortifruti/banana.png' alt=''>
+                    </div>
+                    <div id="dvalor">
+                        <div id="base"></div>
+                        <div class="divimg"><img class="baseimg" src="./image/geradorDePreco/basepintura.png" alt=""></div>
+                        <p name="Valor" class="preco" id="s">R$;</p>
+                        <label for="iValorDoProduto"><p name="Reais" class="preco" id="Reais">1</p></label>
+                        <label for="iValorDoProduto"><p name="Virgula" class="preco" id="virgula">,</p></label>
+                        <label for="iValorDoProduto"><p name="centavos" class="preco" id="centavos">99</p></label>
+                        <label for="kg"><p name="peso" class="preco" id="peso">Kg</p></label>
+                    </div> 
                 </div>
+            </div>
                 <div id="dentrada">
                     <input name="TipoDeProduto" class="entrada" id="itipoDeProduto" placeholder="Exemplo: CARNE BOVINA">
                     <label for="itipoDeProduto">Tipo De Produto</label>
@@ -67,9 +75,13 @@
                         <optgroup label="CABEÇALHO">
                     <option value="a1">Promoção</option>
                     <option value="a2">Oferta</option>
+                    <option value="a3">Promoção Simples</option>
+                    <option value="a4">Oferta Simples</option>
                         </optgroup>
                         <optgroup label="FONTE: NOME DO PRODUTO">
                     <option value="b1" style="font-family: 'Anton', sans-serif">Anton</option>
+                    <option value="b14" style="font-family: 'Nerko One', cursive; font-weight: 400; font-style: normal;">Nerko One</option>
+                    <option value="b15" style="font-family: 'Oleo Script', system-ui;font-weight: 700; font-style: normal;">Oleo Script</option>
                     <option value="b2" style="font-family: Cedarville Cursive, cursive">Cedarville Cursive</option>
                     <option value="b3" style="font-family: Chelsea Market, cursive">Chelsea Market</option>
                     <option value="b4" style="font-family: Courier Prime, monospace">Courier Prime</option>
@@ -82,21 +94,83 @@
                     <option value="b9" >Cor: Descrição</option>
                     <option value="b12" >Cor: Valor</option>
                         </optgroup>
-                    <optgroup label="ESTILOS">
-                    <option value="c1">Base em Arredondada</option>
+                    <optgroup label="BASE">
+                    <option value="c6">Pintura</option>
+                    <option value="c7">Com Pontas</option>
                     <option value="c2">Base Quadrada</option>
                     <option value="c3">Base Arredondada</option>
-                    <option value="c4">Clássico</option>
-                    <option value="c5">Padrão</option>
                     </optgroup>
                     </select>
                     <label for="opcoes">Personalizar</label>
                     <br><br>
-                    <p id="perscor"></p>
+                    <div class="controleImg">
+                    <input class='cor' onchange="mudarcor5()" id="cor5" type=color>
+                    <label for="cor5">Alterar Cor de Fundo</label>
+                    <br><br>
+                    <select onchange="atualizarImagem()" id="opcoesImage">
+                        <optgroup label="FRUTAS">
+                            <option value="banana">Banana</option>
+                            <option value="limao">Limão</option>
+                            <option value="melao">Melão</option>
+                            <option value="alho">Alho</option>
+                            <option value="beterraba">Beterraba</option>
+                            <option value="cebola">Cebola</option>
+                            <option value="cenoura">Cenoura</option>
+                            <option value="laranja">Laranja</option>
+                            <option value="maca">Maçã</option>
+                            <option value="manga">Manga</option>
+                            <option value="pepino">Pepino</option>
+                            <option value="pimentao">Pimentão</option>
+                            <option value="repolho">Repolho</option>
+                            <option value="tomate">Tomate</option>
+                            <option value="batatadoce">Batata Doce</option>
+                            <option value="chuchu">Chuchu</option>
+                            <option value="cebolaroxa">Cebola Roxa</option>
+                        </optgroup>
+                    </select>
+                    <label for="opcoesImage">Alterar Imagem</label><br>
+                    <input id="imageUpload" accept="image/*" type="file">
+                    <br><br>
+                    <input class="ativarimage" onchange="check()" type="checkbox">
+                    <Label for="camada">Adcionar Imagem</Label><br>
+                    <input class="camada" onchange="check()"  type="checkbox" checked>
+                    <Label for="camada">Camada Acima</Label><br>
+                    <input class="linha" onchange="check()" type="checkbox" >
+                    <Label for="linha">Adcionar Linha</Label>
+                    </div>
+                    <p id="perscor"></p><br>
                     <div id="TamanhoNomeProduto">
-                    <bUtton onclick="cre()">+</bUtton>
-                    <bUtton onclick="dim()">-</bUtton>
-                    <label for="TamanhoNomeProduto">Tamanho do Nome do Produto</label>
+                        <bUtton onclick="cre()">+</bUtton>
+                        <bUtton onclick="dim()">-</bUtton>
+                        <label for="TamanhoNomeProduto">Tamanho: <span class="AManipular">Clique no Texto Para Manipular</span><br><br>
+                        <span id="paragrafotxt" onclick="paragrafo()" class="paragrafos">Mais opções de Manipulação</span>
+                    </div>
+                    <div class="manipulacaoText">
+                        <div class="cab">
+                           <p class="Manipular"><span class="AManipular">Clique no Texto Para Manipular</span></p>
+                           <span id="paragrafox" class="paragrafos" style="position: relative; background-color: red; " onclick="paragrafo()">X</span>
+                        </div>
+                        <div class="posicao">
+                            <div class="posi">
+                                <bUtton onclick="posicao('c')">⬆</bUtton>
+                                <div style="margin: 0px">
+                                    <bUtton onclick="posicao('e')"><</bUtton>
+                                    <bUtton onclick="posicao('b')">⬇</bUtton>
+                                    <bUtton onclick="posicao('d')">></bUtton>
+                                </div>
+                            </div>
+                            <label for="TamanhoNomeProduto">Posição: <span class="AManipular"></span></label>
+                        </div><br>
+                        <div id="TamanhoNomeProduto">
+                            <bUtton onclick="esp('mais')">+</bUtton>
+                            <bUtton onclick="esp('menos')">-</bUtton>
+                            <label for="TamanhoNomeProduto">Espaçamento entre Palavras</label>
+                        </div> <br>
+                        <div id="TamanhoNomeProduto">
+                            <bUtton onclick="espLinha('mais')">+</bUtton>
+                            <bUtton onclick="espLinha('menos')">-</bUtton>
+                            <label for="TamanhoNomeProduto">Espaçamento entre Linhas </label>
+                        </div>
                     </div>
                     <br>
                     <button class="botao1" onclick="gerar()">Gerar Placa</button>
@@ -119,10 +193,10 @@
             <button onclick="tra()" class="but"><</button>
             <div class="slide">
                 <div class="fotos">
-                    <img class="sli" src="./image/geradorDePreco/1.jpg" alt="">
-                    <img class="sli" src="image/geradorDePreco/2.jpg" alt="">
-                    <img class="sli" src="image/geradorDePreco/3.jpg" alt="">
-                    <img class="sli" src="image/geradorDePreco/4.jpg" alt="">
+                    <img class="sli" src="image/geradorDePreco/slide/1.jpg" alt="">
+                    <img class="sli" src="image/geradorDePreco/slide/2.jpg" alt="">
+                    <img class="sli" src="image/geradorDePreco/slide/3.jpg" alt="">
+                    <img class="sli" src="image/geradorDePreco/slide/4.jpg" alt="">
                 </div>
             </div>
             <button onclick="fre()" class="but">></button>
@@ -157,6 +231,7 @@
 
 
     <script>
+        
         slide = document.querySelector('.fotos');
         fotos = document.querySelectorAll('.sli');
 
@@ -188,6 +263,7 @@
 
         setInterval(fre, 5000)
     </script>
+    <script src="placa.js"></script>
     
 </div>
 <footer>
