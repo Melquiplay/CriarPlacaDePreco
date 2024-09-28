@@ -1,27 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Cedarville+Cursive&family=Chelsea+Market&family=Courier+Prime:ital,wght@1,700&family=Hanalei+Fill&family=Metal+Mania&family=Righteous&family=Roboto:ital,wght@0,400;1,900&family=Sarala:wght@700&family=Special+Elite&display=swap');
 
-/*Eu adaptei parte do código para ser utilizada em um outro projeto com mais recursos,
- por este motivo, algumas linhas de código, principalmente aqui do CSS estão inutilizadas
- nessa versão do site, como por exemplo, as variáveis de modo dark*/
-
 *{
     margin: 0;
  }
 body{
     position: relative;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    height: 100%;
 }
  header{
     display: flex;
     position: relative;
-    background-color: red;
+    background-color: rgb(255, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     padding: 10px;
     justify-content:space-around;
     align-items: center;
     }
+
+    .childBox{
+      position: relative;
+      max-width: 1400px;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: var(--margin);
+      padding: 5px; 
+   }
+
  .redes_box{
    display: flex;
    gap: 15px;
@@ -33,19 +44,9 @@ body{
    font-family: 'Sora', sans-serif;
    font-size: 20px;
  }
-
  .logo{
     width: 15rem;
  }
-
-.childBox{
-   position: relative;
-   max-width: 1400px;
-   left: 50%;
-   transform: translate(-50%);
-   margin-top: var(--margin);
-   padding: 5px; 
-}
 
  footer{
     display: flex;
@@ -59,21 +60,6 @@ body{
     bottom: 0;
     width: 100%;
  }
-
- 
- body{
-    display: flex;
-    background-color: aliceblue;
-    flex-direction: column;
-    width: 100%;
-    gap: 3rem;
-    height: 100%;
-   }
-
-button:hover{
- background-color:  red;
- color: white;
-}
 
 .footer_info{
    display: flex;
@@ -89,272 +75,381 @@ label p:hover{
     cursor: pointer;
 }
 
-[theme="dark"]{
-   --cor_fundo: rgb(44, 44, 44);
-   --cor_txt: white;  
-}
-
-
-.tema{
-   width: 100%;
-   text-align: center;
-   font-size: 100px;
-   background-color: rgb(126, 125, 125);
-   margin-top: 5rem;
-   margin-bottom: 4rem;
-}
-
-.tema h1{
-   font-size: 40px;
-   color: white;
-}
-
-.uso{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   flex-direction: column;
-   gap: 2rem;
-   margin-bottom: 2rem;
-}
-
-.txt{
-   width: 60%;
-   color: var(--cor_txt);
-   font-size: 18px;
-   font-family: Arial, Helvetica, sans-serif;
-}
-.txt h2{
-   text-align: center;
-}
-
-.uso img {
-   width: 100%;
-}
-
-body{
-   background-color: var(--cor_fundo);
-}
+:root{
+    --preal: 280px;
+    --prigth: 150px;
+    --ptop: -30px;
+    --pvirgula: 17px;
+    --pcent: 40px;
  
-#placa{
-   position: relative;
-   width: 400px;
-   height: 560px;   
-   background-color: rgb(255, 255, 255);
-   overflow: hidden;
-   box-shadow: 5px 5px 15px rgb(0, 0, 0);
+    --sreal: 210px;
+    --srigth: 135px;
+    --stop: -8px;
+    --virgula: 17px;
+    --cent: 30px;
+ }
+ 
+ #Reais{
+    font-weight: bold;
+    position: absolute;
+    font-size: var(--preal);
+    right: 150px;
+    top: var(--ptop);
+    letter-spacing: -10px;
+   }
+ 
+ 
+ .manipulacaoText{
+    display: none;
+    background-color: rgb(163, 163, 163);
+    padding: 10px;
+    border-radius: 15px;
+ }
+ .cor{
+    width: 50px;
+    height: 30px;
+    border: none;
  }
 
+ .divImgProduto{
+    width: 150px;
+    position: absolute;
+    z-index: 4;
+    left: 250px;
+    top: 230px;
+    display: none;
+ 
+ }
+ 
+ .baseimg{
+    margin-top: -10px;
+    width: 100%;
+ }
+ 
+ 
+ .divImgProduto img{
+    width: 100%;
+    filter: drop-shadow(6px 6px 5px #141414);
+ }
+ 
+ .controleImg{
+    background-color: rgb(163, 163, 163);
+    padding: 10px;
+    border-radius: 15px;
+ }
+ 
+ .cab{
+    display: flex;
+   justify-content: space-between;
+   
+ }
+ 
+ .paragrafos{
+    cursor: pointer;
+ }
+ #paragrafox{
+    border-radius: 50px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .paragrafos:hover{
+    color: blue;
+ }
+ 
+ .tema{
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    background-color: rgb(126, 125, 125);
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+ }
+ 
+ .tema h1{
+    font-size: 40px;
+    color: white;
+ }
+ 
+ .uso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+ 
+ }
+ 
+ .txt{
+    width: 50%;
+    color: var(--cor_txt);
+ }
+ .txt h2{
+    text-align: center;
+ }
+ 
+ .uso img {
+    width: 100%;
+ }
+ 
+ body{
+    background-color: var(--cor_fundo);
+ }
+  
+ #placa{
+    position: relative;
+    width: 400px;
+    height: 560px;   
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0);
+  }
+ 
  .placaFundo{
-   background-color: white;
-   width: 100%;
-   height: 100%;
- }
-
-
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
  
-#tpromoção{
-   -webkit-text-stroke-width: 2px;
-   -webkit-text-stroke-color: #000;
-   border-bottom: solid 3px black ;
-   font-weight: bold;
-   background-color: red;
-   font-size: 60px;
-   font-family: Arial, sans-serif;
-   text-align: center;
-   color: white;        
-   margin-bottom: auto;
+ .divCab img{
+    width: 100%;
  }
-#produto{
-   position: absolute;
-   width: 100%;
-   height: 42%;
-   text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
+ 
+ .divLinha img{
+    width: 100%;
+    position: absolute;
+    transform: translateX(-50%);
  }
-#promocao{
- padding: 4px;
- margin-bottom: auto;
- color: white;
-}
-#tipoDeProduto{
- font-weight: bold;
- font-size: 40px;
- margin-bottom: 0;
- color: #000;
-}
-#NomeDoProduto{
- position: relative;
- font-family: 'Anton', sans-serif;
- position: relative; 
- left: 52%;
- font-size: 70px;
- transform: translate(-50%, -1%);
- margin: -10px;
- color: #000;
-}
-.nomeproduto{
- color: rgb(0, 0, 0);
-}
-#descricao{
- font-weight: bold;
- font-size: 40px;
- margin-bottom: 0;
- color: #000;
-}
-#s{
- font-weight: bold;
- position: absolute;
- font-size: 60px;
- left: 30px;
- top: 20px;
-}
-#Reais{
- font-weight: bold;
- position: absolute;
- font-size: 180px;
- right: 130px;
- top: 40px;
-}
-#centavos{
- font-weight: bold;
- position: absolute;
- font-size: 100px;
- left: 290px;
- top: 60px;
- text-decoration: underline;
-}
-#virgula{
- position: absolute;
- font-size: 150px;
- top: 10px;
- right: 105px;
-}
-.preco{
- color: red;
-}
-#peso{
- font-weight: bold;
- margin-bottom: 0;
- position: absolute;
- font-size: 30px;
- position: absolute;
- bottom: 30px;
- right: 50px;
-}
-#base{
- position: absolute;
- width: 380px;
- height: 240px;
- background-color: yellow;
- margin: 10px;
- border-radius: 70px;
- border: solid 3px rgb(255, 0, 0);
-}
-#dentrada{
-   box-shadow: 5px 2px rgba(0, 0, 0, 0.5);
-   width: 320px;
-   padding: 20px;
-   border: 2px solid black ;
-   border-radius: 10px;
-   background-color: silver;
-   font-size: 18px;
-   border-radius: 10px;
-   border: none;   
-   height: 80%;
-}
-.botao1{
- width: 45%;
- border-radius: 20px;
- background-color: yellow;
- font-size: 15px;
- padding: 3px;
- border: none;
-}
-button:hover{
- background-color:  red;
- color: white;
-}
-#dvalor{
- position: absolute;
- width: 100%;
- height: 50%;
- top: 300px;
-}
-
-.placas{
-   display: flex;
-   justify-content: space-around;
-   gap: 1rem;
-   flex-wrap: wrap;
-}
-
-
-.redes_icon{
-   width: 40px;
-}
-
-.content{
-   display: flex;
-   justify-content: space-around;
-   gap: 1rem; 
-}
-
-.slide{
-   display: flex;
-   width: 1000px;
-   align-items: center;
-   justify-content: center;
-   gap: 1rem;
-   overflow: hidden;
-   background-color: aliceblue;
-}
-
-.fotos{
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-items: center;
-   width: 100%;
-   border-radius: 15px;
-   transform: translateX(0);
-   background-color: aliceblue;
-   transition: 1s;
-}
-
-button{
-   background-color: white;
-}
-
-
-.sli{
-   width: 100%; 
-}
-
-.carro{
-   margin-left: 50%;
-   transform: translateX(-50%);
-   width: 70%;
-   display: flex;
-   align-items: center;
-   margin-bottom: 1rem;
-}
-
-iframe{  
-   width: 100%;
-   height: 500px;  
-}
-.video{
-   margin-left: 50%;
-   transform: translateX(-50%);
-   width: 70%;
-   background-color: aliceblue;
-}
-
-
-
-@media screen and (max-width: 1220px) {
+ .divLinha{
+    display: none;
+ }
+  
+ #tpromoção{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    border-bottom: solid 3px black ;
+    font-weight: bold;
+    background-color: red;
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;        
+    margin-bottom: auto;
+    z-index: 1;
+    display: none;
+  }
+ 
+ #produto{
+    position: absolute;
+    width: 100%;
+    height: 42%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    z-index: 2;
+    top: 16%;
+  }
+ 
+ #promocao{
+  padding: 4px;
+  margin-bottom: auto;
+  color: white;
+ }
+ 
+ #tipoDeProduto{
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 0;
+  color: #000;
+  left: 0px;
+ }
+ #NomeDoProduto{
+  font-family: 'Anton', sans-serif;
+  position: relative; 
+  left: 52%;
+  font-size: 70px;
+  transform: translate(-50%, -1%);
+  margin: -10px;
+  color: #000;
+ }
+ .nomeproduto{
+  color: rgb(0, 0, 0);
+ }
+ #descricao{
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 0;
+  color: #000;
+  left: 0px;
+ }
+ 
+ #s{
+  font-weight: bold;
+  position: absolute;
+  font-size: 60px;
+  left: 20px;
+  top: 15px;
+ }
+ 
+ #centavos{
+  font-weight: bold;
+  position: absolute;
+  font-size: 90px;
+  left: 285px;
+  top: var(--pcent);
+  text-decoration: underline;
+ }
+ #virgula{
+  position: absolute;
+  font-size: 120px;
+  top: var(--pvirgula);
+  right: 115px;
+ }
+ .preco{
+  color: red;
+  z-index: 3;
+  font-family: "Oleo Script", system-ui;
+  font-weight: 700;
+  font-style: normal;
+ }
+ #peso{
+  font-weight: bold;
+  margin-bottom: 0;
+  position: absolute;
+  font-size: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+ }
+ #base{
+  position: absolute;
+  width: 380px;
+  height: 240px;
+  background-color: yellow;
+  margin: 10px;
+  border-radius: 70px;
+  border: solid 3px rgb(255, 0, 0);
+  overflow: hidden;
+  z-index: 2;
+  display: none;
+ }
+ #dentrada{
+    box-shadow: 5px 2px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    padding: 20px;
+    border: 2px solid black ;
+    border-radius: 10px;
+    background-color: silver;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;   
+    height: 80%;
+ }
+ .botao1{
+  width: 45%;
+  border-radius: 20px;
+  background-color: yellow;
+  font-size: 15px;
+  padding: 3px;
+  border: none;
+ }
+ button:hover{
+  background-color:  red;
+  color: white;
+ }
+ #dvalor{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 300px;
+ }
+ 
+ .placas{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+ }
+ 
+ .redes_icon{
+    width: 40px;
+ }
+ 
+ .content{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem; 
+ }
+ 
+ .slide{
+    display: flex;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+    background-color: aliceblue;
+ }
+ 
+ .fotos{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    border-radius: 15px;
+    transform: translateX(0);
+    background-color: aliceblue;
+    transition: 1s;
+ }
+ 
+ button{
+    background-color: white;
+ }
+ .sli{
+    width: 100%; 
+ }
+ 
+ .carro{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+ }
+ 
+ iframe{  
+    width: 100%;
+    height: 500px;  
+ }
+ .video{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: aliceblue;
+ }
+ 
+ .posicao{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    
+    gap: 5px;
+ }
+ .posi{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ 
+ }
+ 
+ @media screen and (max-width: 1220px) {
    .content{
       display: flex;
       gap: 10rem;
@@ -378,7 +473,6 @@ iframe{
    iframe{  
       height: 350px;  
    }
-
    }
    @media screen and (max-width: 800px) {
       .content{
@@ -435,71 +529,73 @@ iframe{
       top: 280px;
      }
 
-   #base{
-   position: absolute;
-   width: 330px;
-   height: 200px;
-   background-color: yellow;
-   margin: 10px;
-   border-radius: 70px;
-   border: solid 3px rgb(255, 0, 0);
-   }
-   #centavos{
-      font-weight: bold;
-      position: absolute;
-      font-size: 90px;
-      left: 245px;
-      top: 70px;
-      text-decoration: underline;
-     }
-   #tipoDeProduto, #descricao{
-      font-size: 35px;
-   }
-   #tpromoção{
-      font-size: 55px;
-    }
-   #Reais{
+#base{
+position: absolute;
+width: 330px;
+height: 200px;
+background-color: yellow;
+margin: 10px;
+border-radius: 70px;
+border: solid 3px rgb(255, 0, 0);
+}
+#centavos{
    font-weight: bold;
    position: absolute;
-   font-size: 170px;
-   right: 130px;
-   top: 55px;
+   font-size: 90px;
+   left: 245px;
+   top: var(--cent);
+   text-decoration: underline;
    }
-   #virgula{
-      top: 70px;
-      font-size: 100px;
-     }
+#tipoDeProduto, #descricao{
+   font-size: 35px;
+}
+#tpromoção{
+   font-size: 55px;
    }
-   
-   @media screen and (max-width: 700px) {
-      .redes_box{
-         display: flex;
-         gap: 15px;
-         flex-wrap: wrap;
-         flex-direction: column;
-      }
-      .logo{
-         width: 10rem;
-      }
-      .redes{
-         text-decoration: none;
-         color: white;
-         font-family: 'Sora', sans-serif;
-         font-size: 15px;
-       }
-      
-    }
-    @media screen and (max-width: 500px) {
-      .redes_box{
-         display: none;
-      }
+#Reais{
+font-weight: bold;
+position: absolute;
+font-size: var(--sreal);
+right: var(--srigth);
+top: var(--stop);
+}
+#virgula{
+   top: var(--virgula);
+   font-size: 100px;
+   right: 108px;
    }
-    .section1{
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-around;
-       gap: 1rem;
-       width: 100%;
-    
-    } 
+}
 
+@media screen and (max-width: 700px) {
+   .redes_box{
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      flex-direction: column;
+   }
+   .logo{
+      width: 10rem;
+   }
+   .redes{
+      text-decoration: none;
+      color: white;
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      }
+   
+   }
+   @media screen and (max-width: 500px) {
+   .redes_box{
+      display: none;
+   }
+}
+body{
+   background-color: #e7e7e7;
+}
+.section1{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   gap: 1rem;
+   width: 100%;
+} 
