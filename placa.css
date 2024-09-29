@@ -4,6 +4,11 @@
 *{
     margin: 0;
  }
+
+.txt{
+   font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
     position: relative;
     min-height: 100vh;
