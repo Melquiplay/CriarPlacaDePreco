@@ -20,6 +20,40 @@ document.getElementById('imageUpload').addEventListener('change', function(event
   }
   });
 
+function moedas(){ const selectedRadio = document.querySelector('input[name="moeda"]:checked');
+    if (selectedRadio.parentElement.querySelector('label').textContent == "(R$) Real"){
+      document.querySelector(".preco").innerHTML = "R$;"
+    } else if(selectedRadio.parentElement.querySelector('label').textContent == "(€) Euro"){
+      document.querySelector(".preco").innerHTML = "€;"
+    }else if(selectedRadio.parentElement.querySelector('label').textContent == "($) Dolar"){
+      document.querySelector(".preco").innerHTML = "$;"
+    }
+  }
+  document.addEventListener('DOMContentLoaded',function(){const radios = document.querySelectorAll('input[name="moeda"]');
+  radios.forEach(function(radio) { radio.addEventListener('change', moedas); }); });
+
+moedaStatu = false
+imagemjanela = false
+function moeda(){
+  if (moedaStatu){
+    document.querySelector(".moeda").style.display = "none";
+  }else{
+    document.querySelector(".moeda").style.display = "block";
+  }
+  moedaStatu = !moedaStatu;
+}
+
+function imagemconfig(){
+  if (imagemjanela){
+    document.querySelector(".controleImg").style.display = "none";
+    document.querySelector("#addImg").style.display = "block";
+  }else{
+    document.querySelector(".controleImg").style.display = "block";
+    document.querySelector("#addImg").style.display = "none";
+  }
+  imagemjanela = !imagemjanela;
+}
+
 function EmFoco(foco){
 
   textoEmFoco = foco;
@@ -41,6 +75,7 @@ function EmFoco(foco){
 }
 
 function check(){
+
   ativarimage = document.querySelector('.ativarimage');
   camada = document.querySelector('.camada');
   image = document.querySelector('.imgproduto');
@@ -461,6 +496,7 @@ function posicao(comando){
    } 
  }
 }
+
 
 function cre(){
   if (textoEmFoco == 'tipoDeProduto'){
