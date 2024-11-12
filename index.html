@@ -16,6 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Cedarville+Cursive&family=Chelsea+Market&family=Courier+Prime:ital,wght@1,700&family=Hanalei+Fill&family=Metal+Mania&family=Righteous&family=Roboto:ital,wght@0,400;1,900&family=Sarala:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body >
+    <div class="moeda">
+        <div class="moedaCab">
+            <a onclick="moeda()" class="fechar">X</a>
+            <h2>Moeda</h2>
+        </div>
+        <div class="moedafi">
+            <ul>
+                <li><label for="mreal">(R$) Real</label><input id="mreal" class="mreal" name="moeda" type="radio" checked></li>
+                <li><label for="meuro">(€) Euro</label><input id="meuro" class="meuro" name="moeda" type="radio"></li>
+                <li><label for="mdolar">($) Dolar</label><input id="mdolar" class="mdolar" name="moeda" type="radio"></li>
+            </ul>
+        </div>
+    </div>
     <header>
         <div class="redes_box">
             <a class="redes" href="https://youtu.be/w4SSSvUv-Uw">Tutorial de uso</a>
@@ -47,7 +60,7 @@
                     <div id="dvalor">
                         <div id="base"></div>
                         <div class="divimg"><img class="baseimg" src="./image/geradorDePreco/basepintura.png" alt=""></div>
-                        <p name="Valor" class="preco" id="s">R$;</p>
+                        <p onclick="moeda()" name="Valor" class="preco" id="s">R$;</p>
                         <label for="iValorDoProduto"><p name="Reais" class="preco" id="Reais">1</p></label>
                         <label for="iValorDoProduto"><p name="Virgula" class="preco" id="virgula">,</p></label>
                         <label for="iValorDoProduto"><p name="centavos" class="preco" id="centavos">99</p></label>
@@ -103,47 +116,53 @@
                     </select>
                     <label for="opcoes">Personalizar</label>
                     <br><br>
+                    <span onclick="imagemconfig()" id="addImg" class="paragrafos">Adcionar Imagem</span>
                     <div class="controleImg">
-                    <input class='cor' onchange="mudarcor5()" id="cor5" type=color>
-                    <label for="cor5">Alterar Cor de Fundo</label>
-                    <br><br>
-                    <select onchange="atualizarImagem()" id="opcoesImage">
-                        <optgroup label="FRUTAS">
-                            <option value="banana">Banana</option>
-                            <option value="limao">Limão</option>
-                            <option value="melao">Melão</option>
-                            <option value="alho">Alho</option>
-                            <option value="beterraba">Beterraba</option>
-                            <option value="cebola">Cebola</option>
-                            <option value="cenoura">Cenoura</option>
-                            <option value="laranja">Laranja</option>
-                            <option value="maca">Maçã</option>
-                            <option value="manga">Manga</option>
-                            <option value="pepino">Pepino</option>
-                            <option value="pimentao">Pimentão</option>
-                            <option value="repolho">Repolho</option>
-                            <option value="tomate">Tomate</option>
-                            <option value="batatadoce">Batata Doce</option>
-                            <option value="chuchu">Chuchu</option>
-                            <option value="cebolaroxa">Cebola Roxa</option>
-                        </optgroup>
-                    </select>
-                    <label for="opcoesImage">Alterar Imagem</label><br>
-                    <input id="imageUpload" accept="image/*" type="file">
-                    <br><br>
-                    <input class="ativarimage" onchange="check()" type="checkbox">
-                    <Label for="camada">Adcionar Imagem</Label><br>
-                    <input class="camada" onchange="check()"  type="checkbox" checked>
-                    <Label for="camada">Camada Acima</Label><br>
-                    <input class="linha" onchange="check()" type="checkbox" >
-                    <Label for="linha">Adcionar Linha</Label>
+                        <div class="cab">
+                            <p class="Manipular"><span class="AManipular">Imagem e Cor de Fundo</span></p>
+                            <span class="paragrafos" style="position: relative; background-color: red; " onclick="imagemconfig()">X</span>
+                         </div>
+                        <input class='cor' onchange="mudarcor5()" id="cor5" type=color>
+                        <label for="cor5">Alterar Cor de Fundo</label>
+                        <br><br>
+                        <select onchange="atualizarImagem()" id="opcoesImage">
+                            <optgroup label="FRUTAS">
+                                <option value="banana">Banana</option>
+                                <option value="limao">Limão</option>
+                                <option value="melao">Melão</option>
+                                <option value="alho">Alho</option>
+                                <option value="beterraba">Beterraba</option>
+                                <option value="cebola">Cebola</option>
+                                <option value="cenoura">Cenoura</option>
+                                <option value="laranja">Laranja</option>
+                                <option value="maca">Maçã</option>
+                                <option value="manga">Manga</option>
+                                <option value="pepino">Pepino</option>
+                                <option value="pimentao">Pimentão</option>
+                                <option value="repolho">Repolho</option>
+                                <option value="tomate">Tomate</option>
+                                <option value="batatadoce">Batata Doce</option>
+                                <option value="chuchu">Chuchu</option>
+                                <option value="cebolaroxa">Cebola Roxa</option>
+                            </optgroup>
+                        </select>
+                        <label for="opcoesImage">Alterar Imagem</label><br>
+                        <input id="imageUpload" accept="image/*" type="file">
+                        <br><br>
+                        <input class="ativarimage" onchange="check()" type="checkbox">
+                        <Label for="camada">Adcionar Imagem</Label><br>
+                        <input class="camada" onchange="check()"  type="checkbox" checked>
+                        <Label for="camada">Camada Acima</Label><br>
+                        <input class="linha" onchange="check()" type="checkbox" >
+                        <Label for="linha">Adcionar Linha</Label>
                     </div>
                     <p id="perscor"></p><br>
                     <div id="TamanhoNomeProduto">
                         <bUtton onclick="cre()">+</bUtton>
                         <bUtton onclick="dim()">-</bUtton>
                         <label for="TamanhoNomeProduto">Tamanho: <span class="AManipular">Clique no Texto Para Manipular</span><br><br>
-                        <span id="paragrafotxt" onclick="paragrafo()" class="paragrafos">Mais opções de Manipulação</span>
+                        <a id="paragrafotxt" onclick="paragrafo()" class="paragrafos">Mais opções de Manipulação</a><br>
+                        
                     </div>
                     <div class="manipulacaoText">
                         <div class="cab">
@@ -203,7 +222,6 @@
         </div>
 
         <div class="uso">
-
             <div class="txt">
                 <h2>Dicas</h2><br>
                 <p>Para criar a sua placa de preço é bem simples, no campo <b>"Tipo de Produto"</b> você pode especificar o tipo de produto que está em promoção, como, por exemplo:</p><br>
@@ -223,11 +241,11 @@
         </div>
 
         <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OlBUCprGR-g?si=J8WVOztHmkHFkoEl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe   src="https://www.youtube.com/embed/w4SSSvUv-Uw?si=OlPGTZXSdLP9I5cn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
     </div>
-
+    
     <script>
         
         slide = document.querySelector('.fotos');
