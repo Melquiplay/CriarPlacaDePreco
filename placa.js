@@ -182,9 +182,9 @@ function paragrafo(){
     paragraf = true;
   }
 }
+
 function gerar(){
 
-  
     tipo = document.getElementById('itipoDeProduto');
     produto = document.getElementById('iNomeDoProduto');
     descrição = document.getElementById('idescricao');
@@ -293,13 +293,40 @@ function gerar(){
         document.getElementById("base").style.display = "none";
         document.querySelector(".divimg").innerHTML = "<img class='baseimg' src='./image/geradorDePreco/baseComPontasmelquitech.png' alt=''>"
         break;
-      
       case "c6":
         document.querySelector(".divimg").style.display = "block";
         document.getElementById("base").style.display = "none";
         document.querySelector(".divimg").innerHTML = "<img class='baseimg' src='./image/geradorDePreco/basepintura.png' alt=''>"
         break;
-      
+        case "c4":
+            document.querySelector(".divimg").style.display = "none"
+            document.getElementById("base").style.display = "none";
+        break;
+        case "c10":
+            document.querySelector(".divimg").style.display = "block"
+            document.getElementById('tpromoção').style.backgroundColor = "red"
+            texto = document.querySelector(".preco").style.color = "red"
+            texto1 = document.getElementById("Reais").style.color = "red"
+            texto2 = document.getElementById("centavos").style.color = "red"
+            texto3 = document.getElementById("virgula").style.color = "red"
+            texto4 = document.getElementById("peso").style.color = "red"
+            document.querySelector(".divCab").style.display = "block"
+            document.getElementById('tpromoção').style.display = "none"
+            document.querySelector(".pb").innerHTML = "Preto e Branco"
+        break;
+        case "c5":
+            document.querySelector(".divimg").style.display = "none"
+            document.getElementById("base").style.display = "none";
+            document.getElementById('tpromoção').style.backgroundColor = "black"
+            texto = document.querySelector(".preco").style.color = "black"
+            texto1 = document.getElementById("Reais").style.color = "black"
+            texto2 = document.getElementById("centavos").style.color = "black"
+            texto3 = document.getElementById("virgula").style.color = "black"
+            texto4 = document.getElementById("peso").style.color = "black"
+            document.querySelector(".divCab").style.display = "none"
+            document.getElementById('tpromoção').style.display = "block"
+            document.querySelector(".pb").innerHTML = "Padrão"
+        break;
     }
     
   }
@@ -660,4 +687,3 @@ document.addEventListener("keydown", function(comando){
       break
   }
 })
-
