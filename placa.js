@@ -224,6 +224,10 @@ function gerar(){
         document.getElementById('promocao').innerHTML = "OFERTA"
         document.getElementById('promocao').style.cssText = 'font-size: 65px; padding: -10 '
         break;
+        case "a5":
+          document.querySelector(".divCab").style.display = "none"
+          document.getElementById('tpromoção').style.display = "none"
+        break;           
       case "b1":
         texto = document.getElementById("NomeDoProduto")
         texto.style.fontFamily = 'Anton, sans-serif'
