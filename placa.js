@@ -644,20 +644,39 @@ valor.addEventListener('input', () => {
       root.style.setProperty('--stop', '40px');
       root.style.setProperty('--virgula', '65px');
       root.style.setProperty('--cent', '65px');
-    }
-    else{
+    }else if(carac.length == 3){
       root.style.setProperty('--preal', '150px');
       root.style.setProperty('--prigth', '150px');
       root.style.setProperty('--ptop', '60px');
       root.style.setProperty('--pvirgula', '50px');
       root.style.setProperty('--pcent', '75px');
-
       root.style.setProperty('--sreal', '120px');
       root.style.setProperty('--srigth', '145px');
       root.style.setProperty('--stop', '60px');
       root.style.setProperty('--virgula', '65px');
-      root.style.setProperty('--cent', '65px');
-        
+      root.style.setProperty('--cent', '65px');  
+    }else if(carac.length == 4){
+      root.style.setProperty('--preal', '120px');
+      root.style.setProperty('--prigth', '150px');
+      root.style.setProperty('--ptop', '70px');
+      root.style.setProperty('--pvirgula', '50px');
+      root.style.setProperty('--pcent', '75px');
+      root.style.setProperty('--sreal', '100px');
+      root.style.setProperty('--srigth', '145px');
+      root.style.setProperty('--stop', '80px');
+      root.style.setProperty('--virgula', '65px');
+      root.style.setProperty('--cent', '65px'); 
+    }else{
+      root.style.setProperty('--preal', '100px');
+      root.style.setProperty('--prigth', '150px');
+      root.style.setProperty('--ptop', '80px');
+      root.style.setProperty('--pvirgula', '50px');
+      root.style.setProperty('--pcent', '75px');
+      root.style.setProperty('--sreal', '85px');
+      root.style.setProperty('--srigth', '145px');
+      root.style.setProperty('--stop', '90px');
+      root.style.setProperty('--virgula', '65px');
+      root.style.setProperty('--cent', '65px');      
     }
    
 });
